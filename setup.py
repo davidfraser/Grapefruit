@@ -14,15 +14,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-try:
-    from setuptools import setup
-except ImportError:
-    from distribute_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup
+from setuptools import setup
 
 setup(
-    setup_requires=['d2to1'],
     extras_require={'test': ['nose', ]},
-    d2to1=True
 )
